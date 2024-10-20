@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e5999de624.js" crossorigin="anonymous"></script>
+</head>
+<body class="center">
+    <div class="container" id="container">
+       <center> 
+            <nav>
+               <div class="btn3" onclick="open_list()" >
+                    <i class="fa-solid fa-list"></i>
+                </div> 
+                <div class="search center">
+                    <input type="text" id="search_bar" oninput="search()" placeholder="Search for a song...">
+                    <div class="btn2" onclick="search()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <div id="results"><div id="songlist"></div></div>
+            </nav>
+      </center>
+        <div id="row">
+           <center><div id="imgs"></div></center> 
+        </div> <br><br>
+        <audio id='audio' src="sounds/fairytale.mp3"></audio>
+        <div id="row">
+            <div class="name fix">
+                <h2 id="n">Fairytale</h2>
+                <h4 id="a">Alexander Rybak Song</h4>
+            </div>
+        </div>
+        <div id="row">
+            <div class="scroll fix center">
+                    <p id="time_b">00:00</p>
+                    <input id="sound" type="range" onchange="seek()" value='0' max="100">
+                    <p id="time_e">00:00</p>
+            </div>
+            <center>
+                <div class="vol fix center">
+                    <p class="low_vol"><i style="font-size: 14px;" class="fa-solid fa-volume-high"></i></p>
+                    <input id="vol" type="range" oninput="volume()" step="0.01" value='1' min="0" max="1">
+                    <p class="high_vol"><i style="font-size: 20px;" class="fa-solid fa-volume-high"></i></p>
+                </div>
+            </center>
+        </div>
+        <div id="row">
+            <div class="control center">
+                    <div class="c" onclick="prevfun()"><i id="prev" class="fa-solid fa-angle-left"></i></div>
+                    <div class="cbtn" onclick="play_pause()" id='btn' ><i class="fa-solid fa-play"></i></div>
+                    <div class="c" onclick="nextfun()"><i id="next" class="fa-solid fa-angle-right"></i></div>
+            </div>
+        </div>
+
+        <div class="musiclist" id="music_l">
+            <div class="header" style="background-color: #ffe0e5;">
+                <div class="row1">
+                    <span>Music List</span>
+                    <div class="close" onclick="close_list()">
+                        <center><i class="fa-solid fa-xmark"></i></center>
+                    </div>
+                </div>
+            </div>
+               <div id="musiclist">
+                    <ul> 
+                        <li>
+                            <div class="row" onclick="play('Fairytale')">
+                                <img src="img/img1.jpg" alt="" width="40px" height="40px">
+                                <div class="text">
+                                <strong><span>Fairytale</span></strong>
+                                <p>Alexander Rybak Song</p>  
+                                </div>           
+                            </div>
+                            <span class="audio_duration">3:02</span>
+                        </li>
+                        <li>
+                            <div class="row" onclick="play('Lose You To Love me')">
+                                <img src="img/img2.jpg" alt="" width="40px" height="40px">
+                                <div class="text">
+                                <strong><span>Lose You To Love me</span></strong>
+                                <p>Selena Gomez Song</p>  
+                                </div>           
+                            </div>
+                            <span class="audio_duration">3:21</span>
+                        </li>
+                        <li>
+                            <div class="row" onclick="play('Calm Down')">
+                                <img src="img/img3.jpg" alt="" width="40px" height="40px">
+                                <div class="text">
+                                <strong><span>Calm Down</span></strong>
+                                <p>Rema Song</p>  
+                                </div>           
+                            </div>
+                            <span class="audio_duration">3:39</span>
+                        </li>
+                        <li>
+                            <div class="row" onclick="play('No Lie')">
+                                <img src="img/img4.jpg" alt="" width="40px" height="40px">
+                                <div class="text">
+                                <strong><span>No Lie</span></strong>
+                                <p>Sean Paul, Dua Lipa Song</p>  
+                                </div>           
+                            </div>
+                            <span class="audio_duration">3:40</span>
+                        </li>
+                        <li>
+                            <div class="row" onclick="play('Feel Me')">
+                                <img src="img/img5.jpg" alt="" width="40px" height="40px">
+                                <div class="text">
+                                <strong><span>Feel Me</span></strong>
+                                <p>Selena Gomez Song</p>  
+                                </div>           
+                            </div>
+                            <span class="audio_duration">3:46</span>
+                        </li>
+                    </ul>
+                </div> 
+        </div>
+
+    </div>
+    <script src="Data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
