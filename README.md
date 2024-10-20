@@ -14,4 +14,4 @@ Welcome to the Music Player Web App! 🎶 This project allows users to explore a
 - CSS
 - JavaScript
 
-Check The Demo link: 
+Check The Demo link: https://mariam-nasser-04.github.io/CodeAlpha_Music_Player/
